@@ -34,7 +34,7 @@ function animatePress(button) {
     button.classList.remove("pressed");
   }, 100);
 }
-$(document).keydown(function() {
+$(document).on("keydown dblclick",function() {
   if (gameRunning == false) {
     gameRunning = true;
     level = 0;
@@ -52,7 +52,7 @@ function checkAnswer(currentLevel) {
     userClickedPattern = [];
     gamePattern = [];
     gameRunning = false;
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("#level-title").text("Game Over, Press Any Key or Double click to Restart");
     playSound("wrong");
     $("body").addClass("game-over");
     setTimeout(function() {
