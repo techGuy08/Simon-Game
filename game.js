@@ -55,7 +55,7 @@ function checkAnswer(currentLevel) {
     gamePattern = [];
     gameRunning = false;
     $("#level-title").text(
-      "Game Over, Press Any Key or Double click to Restart"
+      "Game Over, Press Any Key or click here to Restart"
     );
     playSound("wrong");
     $("body").addClass("game-over");
